@@ -1,0 +1,16 @@
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 0 35px;
+  &-link {
+    color: inherit;
+  }
+  // @media screen and (max-width: 1023px) {
+  //   position: fixed;
+  //   top: 0;
+  //   bottom: 0;
+  //   right: 0;
+  //   background-color: white;
+  //   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  // }
+}
