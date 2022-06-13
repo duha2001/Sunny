@@ -4,3 +4,18 @@ body {
   line-height: 1;
   color: $gray;
 }
+.heading {
+  font-family: $secondary-font;
+  color: $gray-darkest;
+  &--small {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+.text {
+  font-family: $third-font;
+  font-size: 17px;
+  line-height: 176%;
+  font-weight: 300;
+  color: $gray-darker;
+}

@@ -49,6 +49,23 @@ body {
   color: #b8becd;
 }
 
+.heading {
+  font-family: "Playfair Display", serif;
+  color: #202336;
+}
+.heading--small {
+  font-size: 36px;
+  line-height: 50px;
+}
+
+.text {
+  font-family: "Mulish", sans-serif;
+  font-size: 17px;
+  line-height: 176%;
+  font-weight: 300;
+  color: #7d7987;
+}
+
 .header {
   padding-top: 45px;
   padding-bottom: 70px;
@@ -72,6 +89,14 @@ body {
   max-width: 1260px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.viewall {
+  color: #fb8f1d;
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+  white-space: nowrap;
 }
 
 ul {
@@ -103,6 +128,61 @@ ul {
   border: 1px solid currentColor;
 }
 
+.dropdown {
+  width: 100%;
+  position: relative;
+}
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2 ease;
+  transform: translateY(20px);
+}
+.dropdown-list:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  transform: translateY(-100%);
+  background-color: transparent;
+  opacity: 0;
+}
+.dropdown-item, .dropdown-select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  border: 1px solid #afb0b9;
+  color: #202336;
+  border-radius: 6px;
+}
+.dropdown-item {
+  border: 0;
+}
+.dropdown-item:hover {
+  background-color: #f9f9fb;
+}
+.dropdown-item:first-child {
+  border-radius: 12px 12px 0 0;
+}
+.dropdown-item:last-child {
+  border-radius: 0 0 12px 12px;
+}
+.dropdown:hover .dropdown-list {
+  opacity: 1;
+  visibility: visible;
+}
+
 .menu {
   display: flex;
   align-items: center;
@@ -112,8 +192,157 @@ ul {
   color: inherit;
 }
 
+.hero {
+  margin-bottom: 270px;
+}
+.hero-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-heading {
+  font-size: 64px;
+  line-height: 125%;
+  margin-bottom: 74px;
+}
 .hero-content {
   width: 100%;
+}
+.hero-caption {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 48px;
+  padding-bottom: 20px;
+  color: #202336;
+  position: relative;
+  display: inline-block;
+}
+.hero-caption:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background-color: #202336;
+}
+.hero-form {
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+@media screen and (min-width: 1280px) {
+  .hero-image {
+    transform: translateX(85px);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero-content {
+    max-width: 470px;
+  }
+}
+
+.explore {
+  margin-bottom: 292px;
+}
+.explore-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 50px;
+}
+.explore-desc {
+  margin-bottom: 33px;
+}
+.explore-heading {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .explore-content {
+    max-width: 508px;
+    padding-right: 58px;
+  }
+  .explore-image {
+    transform: translateX(-50px);
+  }
+}
+
+.destination {
+  margin-bottom: 232px;
+}
+.destination-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 56px;
+}
+.destination-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+}
+.destination-item {
+  height: 337px;
+  position: relative;
+}
+.destination-image {
+  width: 100%;
+  height: 100%;
+}
+.destination-image img {
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.destination-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #ffffff;
+  z-index: 2;
+  border-radius: 0px 6px 0px 0px;
+  padding: 11px 32px 11px 0;
+}
+.destination-name {
+  font-size: 17px;
+  font-weight: 600;
+  color: #202336;
+  margin-bottom: 10px;
+}
+.destination-country {
+  font-weight: 500;
+  font-size: 15px;
+  color: #80918e;
+}
+
+.guide {
+  margin-bottom: 250px;
+}
+.guide-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 80px;
+}
+.guide-content {
+  width: 100%;
+}
+.guide-heading {
+  margin-bottom: 20px;
+}
+.guide-desc {
+  margin-bottom: 33px;
+}
+@media screen and (min-width: 1024px) {
+  .guide-image {
+    padding-right: 40px;
+  }
+  .guide-content {
+    max-width: 450px;
+    padding-left: 50px;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
